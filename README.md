@@ -1,4 +1,4 @@
-# star-particle-system
+# .celebrate()
 ## Syntax:
 
   `$('.example').celebrate({unicode:"\u2606", color: "black", particles: 5, radius: 200)`
