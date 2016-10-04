@@ -1,21 +1,16 @@
 
 	$(document).ready(function(){
 		(function($){
-			var mouseX, mouseY;
-					$(document).mouseover(function(e) {
-    					mouseX = e.pageX;
-    					mouseY = e.pageY;
-					});
 			$.fn.celebrate = function(options){
-				var settings = $.extend({          		
+				var settings = $.extend({
 	            		particles: 5,
 	            		radius: 200,
 	            		color: "black",
 	            		unicode: null,
 	            		complete: function() {}
 	        		},options);
-				    
-				return this.each(function() {	
+
+				return this.each(function() {
 					for(i=0;i<settings.particles;i++){
 						var particle = $("<p>"+ settings.unicode +"</p>").addClass("particle");
 						$(particle).css("position","absolute");
@@ -27,8 +22,8 @@
 						$(particle).css("transform",'rotate(' + (Math.floor(Math.random()*1000)) + 'deg)');
 						$(this).append($(particle));
 						$(particle).offset({
-						 	top:mouseY-$(particle).height()/2,
-							left:mouseX-$(particle).width()/2
+							top: ($(this).offset.top + $(this).height() / 2) - ($(particle).height() / 2),
+              left: ($(this).offset.left + $(this).width() / 2) - ($(particle).width() / 2)
 						});
 						$(particle).animate(
 							{
@@ -48,7 +43,7 @@
 					}
 	        			settings.complete.call(this);
 	    			});
-	    			
+
 			};
 		}(jQuery));
 	});
