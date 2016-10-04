@@ -33,3 +33,9 @@ This option lets you change how far the particles will go. The default is 200, a
 
 #### Example:
 `$('.example').celebrate({unicode:"\u2606", color:"green", particles: 5, radius: 200})`
+
+
+## Other Things:
+### (I will be updating this list as I can think of more things that are needed info)
+
+If you want to edit the particles, you can use the CSS class "particle"
