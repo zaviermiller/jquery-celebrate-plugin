@@ -8,7 +8,6 @@
 					});
 			$.fn.celebrate = function(options){
 				var settings = $.extend({          		
-	            		particleClass: "particle",
 	            		particles: 5,
 	            		radius: 200,
 	            		color: "black",
@@ -18,7 +17,7 @@
 				    
 				return this.each(function() {	
 					for(i=0;i<settings.particles;i++){
-						var particle = $("<p>"+ settings.unicode +"</p>").addClass(settings.particleClass);
+						var particle = $("<p>"+ settings.unicode +"</p>").addClass("particle");
 						$(particle).css("position","absolute");
 						$(particle).css("margin-top",(Math.floor(Math.random())+10));
 						$(particle).css("margin-left",(Math.floor(Math.random())+10));
